@@ -1,0 +1,137 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN9pmciRNS5XLNGU6HKhUuS",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/SYAHRULAIDIL11/Python/blob/main/math\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3mTL-RxEOki9",
+        "outputId": "09d62e21-f19d-4550-8e5f-ca255bf3fcf1"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "=== MENU ===\n",
+            "    1. Luas Lingkaran\n",
+            "    2. Luas Persegi\n",
+            "    3. Luas Segitiga\n",
+            "    4. Volume Bola\n",
+            "    5. Volume Kubus\n",
+            "    6. Volume Trapesium\n",
+            "    7. Exit\n",
+            "Pilih menu (1, 2, 3, 4, 5, 6, atau 7): 2\n",
+            "Masukkan panjang sisi persegi: 32\n",
+            "Luas persegi adalah: 1024.0\n",
+            "=== MENU ===\n",
+            "    1. Luas Lingkaran\n",
+            "    2. Luas Persegi\n",
+            "    3. Luas Segitiga\n",
+            "    4. Volume Bola\n",
+            "    5. Volume Kubus\n",
+            "    6. Volume Trapesium\n",
+            "    7. Exit\n",
+            "Pilih menu (1, 2, 3, 4, 5, 6, atau 7): 3\n",
+            "Masukkan panjang alas segitiga: 324\n",
+            "Masukkan tinggi segitiga: 1\n",
+            "Luas segitiga adalah: 162.0\n",
+            "=== MENU ===\n",
+            "    1. Luas Lingkaran\n",
+            "    2. Luas Persegi\n",
+            "    3. Luas Segitiga\n",
+            "    4. Volume Bola\n",
+            "    5. Volume Kubus\n",
+            "    6. Volume Trapesium\n",
+            "    7. Exit\n",
+            "Pilih menu (1, 2, 3, 4, 5, 6, atau 7): 7\n",
+            "Terima kasih! Program selesai.\n"
+          ]
+        }
+      ],
+      "source": [
+        "import math\n",
+        "\n",
+        "while True:\n",
+        "    print('''=== MENU ===\n",
+        "    1. Luas Lingkaran\n",
+        "    2. Luas Persegi\n",
+        "    3. Luas Segitiga\n",
+        "    4. Volume Bola\n",
+        "    5. Volume Kubus\n",
+        "    6. Volume Trapesium\n",
+        "    7. Exit''')\n",
+        "\n",
+        "    input_menu = int(input('Pilih menu (1, 2, 3, 4, 5, 6, atau 7): '))\n",
+        "\n",
+        "    if input_menu == 1:\n",
+        "        radius = float(input(\"Masukkan jari-jari lingkaran: \"))\n",
+        "        luas_lingkaran = math.pi * radius ** 2\n",
+        "        print(f\"Luas lingkaran adalah: {luas_lingkaran}\")\n",
+        "\n",
+        "    elif input_menu == 2:\n",
+        "        sisi = float(input(\"Masukkan panjang sisi persegi: \"))\n",
+        "        luas_persegi = sisi ** 2\n",
+        "        print(f\"Luas persegi adalah: {luas_persegi}\")\n",
+        "\n",
+        "    elif input_menu == 3:\n",
+        "        alas = float(input(\"Masukkan panjang alas segitiga: \"))\n",
+        "        tinggi = float(input(\"Masukkan tinggi segitiga: \"))\n",
+        "        luas_segitiga = 0.5 * alas * tinggi\n",
+        "        print(f\"Luas segitiga adalah: {luas_segitiga}\")\n",
+        "\n",
+        "    elif input_menu == 4:\n",
+        "        radius = float(input(\"Masukkan jari-jari bola: \"))\n",
+        "        volume_bola = (4/3) * math.pi * radius ** 3\n",
+        "        print(f\"Volume bola adalah: {volume_bola}\")\n",
+        "\n",
+        "    elif input_menu == 5:\n",
+        "        sisi = float(input(\"Masukkan panjang sisi kubus: \"))\n",
+        "        volume_kubus = sisi ** 3\n",
+        "        print(f\"Volume kubus adalah: {volume_kubus}\")\n",
+        "\n",
+        "    elif input_menu == 6:\n",
+        "        alas_atas = float(input(\"Masukkan panjang alas atas trapesium: \"))\n",
+        "        alas_bawah = float(input(\"Masukkan panjang alas bawah trapesium: \"))\n",
+        "        tinggi = float(input(\"Masukkan tinggi trapesium: \"))\n",
+        "        volume_trapesium = 0.5 * (alas_atas + alas_bawah) * tinggi\n",
+        "        print(f\"Volume trapesium adalah: {volume_trapesium}\")\n",
+        "\n",
+        "    elif input_menu == 7:\n",
+        "        print(\"Terima kasih! Program selesai.\")\n",
+        "        break\n",
+        "\n",
+        "    else:\n",
+        "        print(\"Pilihan tidak valid. Silakan coba lagi.\")\n"
+      ]
+    }
+  ]
+}
